@@ -3,17 +3,18 @@ import "./ConfirmDialog.css";
 
 export default function ConfirmDialog({ message, onConfirm, onCancel }) {
   return (
-    <div className="dialog-overlay">
-      <div className="dialog-box">
-        <h3>Confirm cancellation</h3>
-        <p>{message}</p>
+    <div className="confirm-inline-box">
+      <h4 className="confirm-inline-title">Confirm cancellation</h4>
 
-        <div className="dialog-buttons">
-          <button onClick={onCancel}>No</button>
-          <button className="danger-btn" onClick={onConfirm}>
-            Yes, cancel
-          </button>
-        </div>
+      <p className="confirm-inline-msg">{message}</p>
+
+      <div className="confirm-inline-btns">
+        <button className="confirm-inline-no" onClick={onCancel}>
+          No
+        </button>
+        <button className="confirm-inline-yes" onClick={onConfirm}>
+          Yes, cancel
+        </button>
       </div>
     </div>
   );

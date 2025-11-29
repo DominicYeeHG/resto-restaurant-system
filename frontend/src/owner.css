@@ -1,50 +1,129 @@
-.owner-page {
+/* ============================
+   TABLE MANAGER PANEL
+============================ */
+
+.table-manager-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 22px 24px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+  margin-top: 20px;
+}
+
+.tm-header {
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.owner-title {
-  font-size: 28px;
-  font-weight: 900;
-  color: var(--text);
-}
-
-.owner-sub {
-  font-size: 15px;
-  color: var(--muted);
-  margin-top: -6px;
-}
-
-/* Tabs */
-.owner-tabs {
-  display: flex;
-  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 12px;
 }
 
-.owner-tab {
-  padding: 10px 16px;
-  border-radius: 14px;
-  border: 1px solid rgba(0,0,0,0.06);
-  background: var(--card);
-  cursor: pointer;
+.tm-header h3 {
+  margin: 0;
+  font-size: 20px;
   font-weight: 700;
-  color: var(--text);
-  transition: all .25s ease;
 }
 
-.owner-tab:hover {
-  transform: translateY(-3px);
+.tm-count {
+  background: #f1f5f9;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 12px;
 }
 
-.owner-tab.active {
-  background: linear-gradient(90deg, var(--accent-2), var(--accent));
+.tm-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.tm-row {
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  padding: 12px 16px;
+  border-radius: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tm-label {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.tm-delete {
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: #ef4444;
   color: white;
   border: none;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.15s ease;
 }
 
-/* Content area */
-.owner-content {
-  margin-top: 10px;
+.tm-delete:hover {
+  background: #dc2626;
+}
+
+/* ADD TABLE */
+.tm-add {
+  display: flex;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.tm-input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.tm-add-btn {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: #0f172a;
+  color: white;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: .15s;
+}
+
+.tm-add-btn:hover {
+  background: #1e293b;
+}
+
+/* ==================================
+   RESERVATION BUTTONS (edit/cancel)
+================================== */
+
+.pill-btn {
+  padding: 8px 18px;
+  border-radius: 999px;
+  border: none;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.15s;
+}
+
+.btn-edit {
+  background: #0f172a;
+  color: white;
+}
+
+.btn-edit:hover {
+  background: #1e293b;
+}
+
+.btn-cancel {
+  background: #ef4444;
+  color: white;
+}
+
+.btn-cancel:hover {
+  background: #dc2626;
 }
